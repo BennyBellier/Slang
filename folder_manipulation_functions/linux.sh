@@ -31,20 +31,32 @@ linux_refill_All() {
       file_name=$(basename $i)
       file_type=`filename##*.`
 
-      if [ $file_type == 'c' ]; then
-        `cp $i ./dev/src/`
-      elif [ $file_type == 'cpp' ]; then
-        `cp $i ./dev/src/`
-      elif [ $file_type == 'h' ]; then
-        `cp $i ./dev/include/`
-      elif [ $file_type == 'o' ]; then
-        `cp $i ./build/`
-      elif [ $file_type == $file_name ]; then
-        `cp $i ./bin/debug`
-      elif [ $file_name == '.gitignore' ] || [ $file_name == 'LICENSE' ] || [ $file_name == 'README.md' ]; then
-        `cp $i ./`
-      else
-        `cp $i ./dev/assets`
+      if [ ! -d $i  ]; then
+        case $file_type in
+                        "c")
+                          `cp $i ./dev/src/`
+                          ;;
+                        "cpp")
+                          `cp $i ./dev/src/`
+                          ;;
+                        "h")
+                          `cp $i ./dev/include/`
+                          ;;
+                        "o")
+                          `cp $i ./dev/build/`
+                          ;;
+                        $file_name)
+                          `cp $i ./bin/debug`
+                          ;;
+                        ".gitignore" | "LICENSE" | "README.md")
+                          `cp $i ./`
+                          ;;
+                        *)
+                          dir=$(dirname $i)
+                          `mkdir -p ./assets/$dir`
+                          `cp $i ./assets/`
+                          ;;
+        esac
       fi
     fi
 
