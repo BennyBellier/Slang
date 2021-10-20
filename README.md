@@ -3,7 +3,7 @@
 
 ### Contact Info
   > @BennyBellier
-### Build Status
+<!-- ### Build Status
 Main branch overall build status: [![Build Status](https://dev.azure.com/bennybellier/Slang/_apis/build/status/bennybellier.slang?branchName=master)](https://dev.azure.com/bennybellier/Slang/_build/latest?definitionId=1&branchName=master)
 
 |Platform       |Build Status|
@@ -13,7 +13,7 @@ Main branch overall build status: [![Build Status](https://dev.azure.com/bennybe
 |Windows Debug  |[![Build Status](https://dev.azure.com/bennybellier/Slang/_apis/build/status/bennybellier.slang?branchName=master&jobName=Windows%20Build&configuration=Windows%20Build%20Debug)](https://dev.azure.com/bennybellier/Slang/_build/latest?definitionId=1&branchName=master)|
 |Windows Release|[![Build Status](https://dev.azure.com/bennybellier/Slang/_apis/build/status/bennybellier.slang?branchName=master&jobName=Windows%20Build&configuration=Windows%20Build%20Release%20with%20Release%20Installer)](https://dev.azure.com/bennybellier/Slang/_build/latest?definitionId=1&branchName=master)|
 
-Our CI Builds are provided by Microsoft Azure Pipelines
+Our CI Builds are provided by Microsoft Azure Pipelines. -->
 
 ## Installation
 Run this command ton install Slang
