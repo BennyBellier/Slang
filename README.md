@@ -1,7 +1,7 @@
 # Slang
   Simplify the way you manage your project tree and your makefile with this simple script, at any time.
 ### Contact Info
-  @BennyBellier
+  > @BennyBellier
 ## Installation
 Run this command ton install Slang
 ```sh
