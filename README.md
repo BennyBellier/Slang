@@ -64,7 +64,7 @@ If you decided to use Slang in an already started project, be aware, that your `
  ┃ ┣ 📂debug    # folder containing the debug executable version
  ┃ ┗ 📂release  # folder containing the release executable version
  ┣ 📂build      # folder containing .o files to generate debug and build versions
- ┣ 📂src        # each source is stored by pair header and .c in one folder
+ ┣ 📂dev        # each source is stored by pair header and .c in one folder
  ┃ ┣ 📂assets   # folder containing the project assets
  ┃ ┣ 📂foo      # folder containing pair of header and .c files
  ┃ ┃ ┣ 📜foo.c
