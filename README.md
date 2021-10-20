@@ -1,5 +1,5 @@
 # Slang
-  Simplify the way you manage your project tree and your makefile with this simple script, at any time.
+  Simplify the way you manage your project tree and your makefile with this simple script, at any time. And link it to a git repository.
 
 ### Contact Info
   > @BennyBellier
@@ -35,10 +35,11 @@ The script applies the right executable's extension depending on which OS you ar
 If you decided to use Slang in an already started project, be aware, that your `makefile will be regenerate`. All of your executable where stocked in `bin/debug/`. And it will `initialise git repository` if it **not already exist**.
 
 # Trees
-## ALL-in-One Version
+## All-in-One Version
 ```sh
 📦All-in-One # Project folder
  ┣ 📂.git
+ ┣ 📂.slang     # contain slang folder file
  ┣ 📂bin        # containing executive files
  ┃ ┣ 📂debug    # folder containing the debug executable version
  ┃ ┗ 📂release  # folder containing the release executable version
@@ -56,6 +57,7 @@ If you decided to use Slang in an already started project, be aware, that your `
 ```sh
 📦Divorce # Project folder
  ┣ 📂.git
+ ┣ 📂.slang     # contain slang folder file
  ┣ 📂assets     # folder containing the project assets
  ┣ 📂bin        # containing executive files
  ┃ ┣ 📂debug    # folder containing the debug executable version
@@ -73,6 +75,7 @@ If you decided to use Slang in an already started project, be aware, that your `
 ```sh
 📦Pairwise # Project folder
  ┣ 📂.git
+ ┣ 📂.slang     # contain slang folder file
  ┣ 📂bin        # containing executive files
  ┃ ┣ 📂debug    # folder containing the debug executable version
  ┃ ┗ 📂release  # folder containing the release executable version
@@ -92,7 +95,7 @@ If you decided to use Slang in an already started project, be aware, that your `
 
 # Avancements
 - [X] define trees
-- [ ] tree generation
+- [X] tree generation
 - [ ] tree restructuring (move also files in directories)
 - [ ] browse source files and headers
 - [ ] generate the makefile with the inclusions contained in the files
