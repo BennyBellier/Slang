@@ -1,5 +1,6 @@
 # Slang
   Simplify the way you manage your project tree and your makefile with this simple script, at any time.
+> Attention for the moment Slang is only available for Linux
 ### Contact Info
   > @BennyBellier
 ## Installation
@@ -88,3 +89,4 @@ If you decided to use Slang in an already started project, be aware, that your `
 - [ ] Automatic generation in a project already started
 - [ ] create human readable information
 - [ ] Create man page
+- [ ] Export to be usable on MS Windows and MacOS
