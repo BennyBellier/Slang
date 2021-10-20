@@ -49,7 +49,7 @@ If you decided to use Slang in an already started project, be aware, that your `
  ┃ ┣ 📂include  # folder containing the header files (.h)
  ┃ ┗ 📂src      # folder containing the source files (.c, etc)
  ┣ 📜.gitignore
- ┣ 📜LICENCE
+ ┣ 📜LICENSE
  ┣ 📜MakeFile
  ┗ 📜README.md
 ```
@@ -66,7 +66,7 @@ If you decided to use Slang in an already started project, be aware, that your `
  ┣ 📂include    # folder containing the header files (.h)
  ┣ 📂src        # folder containing the source files (.c, etc)
  ┣ 📜.gitignore
- ┣ 📜LICENCE
+ ┣ 📜LICENSE
  ┣ 📜MakeFile
  ┗ 📜README.md
 ```
@@ -87,7 +87,7 @@ If you decided to use Slang in an already started project, be aware, that your `
  ┃ ┃ ┗ 📜foo.h
  ┃ ┗ 📜main.c
  ┣ 📜.gitignore
- ┣ 📜LICENCE
+ ┣ 📜LICENSE
  ┣ 📜MakeFile
  ┗ 📜README.md
 ```
