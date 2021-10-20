@@ -13,6 +13,11 @@ cd Slang
 ```sh
 slang -h # show usages
 ```
+The script applies the right executable's extension depending on which OS you are :
+* `none` for Linux
+* `.exe` for Windows
+* `.app` for MacOS
+
 ### Use in already start project
 If you decided to use Slang in an already started project, be aware, that your `makefile will be regenerate`. All of your executable where stocked in `bin/debug/`. And it will `initialise git repository` if it **not already exist**.
 
