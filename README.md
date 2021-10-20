@@ -24,56 +24,56 @@ If you decided to use Slang in an already started project, be aware, that your `
 # Trees
 ## ALL-in-One Version
 ```sh
-Project_Folder
-├── bin/        # containing executive files
-|  ├── release/ # folder containing the release executable version
-|  └── debug/   # folder containing the debug executable version
-├── build/      # folder containing .o files to generate debug and build versions
-├── dev/
-|  ├── assets/  # folder containing the project assets
-|  ├── include/ # folder containing the header files (.h)
-|  └── src/     # folder containing the source files (.c, etc)
-|
-├── .gitignore
-├── LICENCE
-├── Makefile
-└── README.md
+📦All-in-One # Project folder
+ ┣ 📂.git
+ ┣ 📂bin        # containing executive files
+ ┃ ┣ 📂debug    # folder containing the debug executable version
+ ┃ ┗ 📂release  # folder containing the release executable version
+ ┣ 📂build      # folder containing .o files to generate debug and build versions
+ ┣ 📂dev
+ ┃ ┣ 📂assets   # folder containing the project assets
+ ┃ ┣ 📂include  # folder containing the header files (.h)
+ ┃ ┗ 📂src      # folder containing the source files (.c, etc)
+ ┣ 📜.gitignore
+ ┣ 📜LICENCE
+ ┣ 📜MakeFile
+ ┗ 📜README.md
 ```
 ## Divorce Version
 ```sh
-Project_Folder
-├── bin/          # containing executive files
-|  ├── release/   # folder containing the release executable version
-|  └── debug/     # folder containing the debug executable version
-├── build/        # folder containing .o files to generate debug and build versions
-├── assets/       # folder containing the project assets
-├── include/      #  folder containing the header files (.h)
-├── src/          # folder containing the source files (.c, etc)
-|
-├── .gitignore
-├── LICENCE
-├── Makefile
-└── README.md
+📦Divorce # Project folder
+ ┣ 📂.git
+ ┣ 📂assets     # folder containing the project assets
+ ┣ 📂bin        # containing executive files
+ ┃ ┣ 📂debug    # folder containing the debug executable version
+ ┃ ┗ 📂release  # folder containing the release executable version
+ ┣ 📂build      # folder containing .o files to generate debug and build versions
+ ┣ 📂include    # folder containing the header files (.h)
+ ┣ 📂src        # folder containing the source files (.c, etc)
+ ┣ 📜.gitignore
+ ┣ 📜LICENCE
+ ┣ 📜MakeFile
+ ┗ 📜README.md
 ```
 
 ## Pairwise version
 ```sh
-Project_Folder
-├── bin/        # containing executive files
-|  ├──release/  # folder containing the release executable version
-|  └──debug/    # folder containing the debug executable version
-├── build/      # folder containing .o files to generate debug and build versions
-├── dev/        # Each source is stored by pair header and .c in one folder
-|  ├── assets/  # folder containing the project assets
-|  ├── Foo/     # folder containing pair of header and .c files
-|  | ├── foo.h
-|  | └── foo.c
-|  └── main.c
-|
-├── .gitignore
-├── LICENCE
-├── Makefile
-└── README.md
+📦Pairwise # Project folder
+ ┣ 📂.git
+ ┣ 📂bin        # containing executive files
+ ┃ ┣ 📂debug    # folder containing the debug executable version
+ ┃ ┗ 📂release  # folder containing the release executable version
+ ┣ 📂build      # folder containing .o files to generate debug and build versions
+ ┣ 📂src        # each source is stored by pair header and .c in one folder
+ ┃ ┣ 📂assets   # folder containing the project assets
+ ┃ ┣ 📂foo      # folder containing pair of header and .c files
+ ┃ ┃ ┣ 📜foo.c
+ ┃ ┃ ┗ 📜foo.h
+ ┃ ┗ 📜main.c
+ ┣ 📜.gitignore
+ ┣ 📜LICENCE
+ ┣ 📜MakeFile
+ ┗ 📜README.md
 ```
 
 
