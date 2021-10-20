@@ -1,8 +1,18 @@
 # Slang
   Simplify the way you manage your project tree and your makefile with this simple script, at any time.
-> Attention for the moment Slang is only available for Linux
+
 ### Contact Info
   > @BennyBellier
+### Build Status
+Main branch overall build status: ![Build Status](https://dev.azure.com/bennybellier/Slang/_apis/build/status/bennybellier.slang?branchName=master)
+
+|Platform       |Build Status|
+|            --:|:--         |
+|Linux          |![Build Status](https://dev.azure.com/bennybellier/Slang/_apis/build/status/bennybellier.slang?branchName=master&jobName=Linux%20Build)|
+|Mac            |![Build Status](https://dev.azure.com/bennybellier/Slang/_apis/build/status/bennybellier.slang?branchName=master&jobName=Mac%20Build)|
+|Windows Debug  |![Build Status](https://dev.azure.com/bennybellier/Slang/_apis/build/status/bennybellier.slang?branchName=master&jobName=Windows%20Build&configuration=Windows%20Build%20Debug)|
+|Windows Release|![Build Status](https://dev.azure.com/bennybellier/Slang/_apis/build/status/bennybellier.slang?branchName=master&jobName=Windows%20Build&configuration=Windows%20Build%20Release%20with%20Release%20Installer)|
+
 ## Installation
 Run this command ton install Slang
 ```sh
