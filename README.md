@@ -7,16 +7,15 @@
 ## Trees
 ### ALL-in-One Version
 ```sh
-bin/ # containing executive files
+bin/          # containing executive files
   | release/  # folder containing the release executable version
   | debug/    # folder containing the debug executable version
-assets/
-  | # folder containing the project assets
 build/
-  | # folder containing .o files to generate debug and build versions
-src/
+  |           # folder containing .o files to generate debug and build versions
+dev/
+  | assets/   # folder containing the project assets
   | include/  # folder containing the header files (.h)
-  | source/   # folder containing the source files (.c, etc)
+  | src/      # folder containing the source files (.c, etc)
 .gitignore
 LICENCE
 Makefile
@@ -24,17 +23,17 @@ README.md
 ```
 ### Divorce Version
 ```sh
-bin/ # containing executive files
+bin/          # containing executive files
   | release/  # folder containing the release executable version
   | debug/    # folder containing the debug executable version
-assets/
-  | # folder containing the project assets
 build/
-  | # folder containing .o files to generate debug and build versions
+  |           # folder containing .o files to generate debug and build versions
+assets/
+  |           # folder containing the project assets
 include/
-  | # folder containing the header files (.h)
-source/
-  | # folder containing the source files (.c, etc)
+  |           # folder containing the header files (.h)
+src/
+  |           # folder containing the source files (.c, etc)
 .gitignore
 LICENCE
 Makefile
@@ -43,15 +42,15 @@ README.md
 
 ### Pairwise version
 ```sh
-bin/ # containing executive files
+bin/          # containing executive files
   | release/  # folder containing the release executable version
   | debug/    # folder containing the debug executable version
-assets/
-  | # folder containing the project assets
 build/
-  | # folder containing .o files to generate debug and build versions
-src/ # Each source is stored by pair header and .c in one folder
-  | Foo/ # folder containing pair of header and .c files
+  |           # folder containing .o files to generate debug and build versions
+dev/          # Each source is stored by pair header and .c in one folder
+  | assets/   
+    |         # folder containing the project assets
+  | Foo/      # folder containing pair of header and .c files
     | foo.h
     | foo.c
   | main.c
