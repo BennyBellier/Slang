@@ -33,17 +33,54 @@ linux_refill_All() {
 
       if [ ! -d $i  ]; then
         case $file_type in
-                        "c")
-                          `cp $i ./dev/src/`
-                          ;;
-                        "cpp")
+                        "c" | "cpp")
                           `cp $i ./dev/src/`
                           ;;
                         "h")
                           `cp $i ./dev/include/`
                           ;;
                         "o")
-                          `cp $i ./dev/build/`
+                          `cp $i ./build/`
+                          ;;
+                        $file_name)
+                          `cp $i ./bin/debug`
+                          ;;
+                        ".gitignore" | "LICENSE" | "README.md")
+                          `cp $i ./`
+                          ;;
+                        *)
+                          dir=$(dirname $i)
+                          `mkdir -p ./dev/assets/$dir`
+                          `cp $i ./dev/assets/`
+                          ;;
+        esac
+      fi
+    fi
+  done
+}
+
+linux_refill_Divorce() {
+  tmp='/tmp/slang-save'
+  
+  if [ -e "$tmp/.git" ]; then
+    `mv $tmp/.git ./`
+  fi
+
+  for i in `find $tmp`; do
+    if [ $i != $tmp ]; then
+      file_name=$(basename $i)
+      file_type=`filename##*.`
+
+      if [ ! -d $i  ]; then
+        case $file_type in
+                        "c" | "cpp")
+                          `cp $i ./src/`
+                          ;;
+                        "h")
+                          `cp $i ./include/`
+                          ;;
+                        "o")
+                          `cp $i ./build/`
                           ;;
                         $file_name)
                           `cp $i ./bin/debug`
@@ -59,11 +96,58 @@ linux_refill_All() {
         esac
       fi
     fi
-
   done
-  
 }
 
+linux_refill_Pairwise() {
+  tmp='/tmp/slang-save'
+  
+  if [ -e "$tmp/.git" ]; then
+    `mv $tmp/.git ./`
+  fi
+
+  for i in `find $tmp`; do
+    if [ $i != $tmp ]; then
+      file_name=$(basename $i)
+      file_type=`filename##*.`
+
+      if [ ! -d $i  ]; then
+        case $file_type in
+                        "c" | "cpp")
+                          file_type_len=${#file_type}
+                          
+
+                          `mkdir ./dev/`
+                          `cp $i ./src/`
+                          ;;
+                        "h")
+                          `cp $i ./include/`
+                          ;;
+                        "o")
+                          `cp $i ./build/`
+                          ;;
+                        $file_name)
+                          `cp $i ./bin/debug`
+                          ;;
+                        ".gitignore" | "LICENSE" | "README.md")
+                          `cp $i ./`
+                          ;;
+                        *)
+                          dir=$(dirname $i)
+                          `mkdir -p ./dev/assets/$dir`
+                          `cp $i ./dev/assets/`
+                          ;;
+        esac
+      fi
+    fi
+  done
+}
+
+function All_to_Divorce() {
+  `mv ./dev/assets ./`
+  `mv ./dev/src ./`
+  `mv ./dev/include ./`
+}
 
 function linux_tree_restructuring() {
   error=0
