@@ -109,19 +109,16 @@ linux_refill_Pairwise() {
   for i in `find $tmp`; do
     if [ $i != $tmp ]; then
       file_name=$(basename $i)
-      file_type=`filename##*.`
+      file_type=${file_name##*.}
 
       if [ ! -d $i  ]; then
         case $file_type in
-                        "c" | "cpp")
+                        "c" | "cpp" | "h")
                           file_type_len=${#file_type}
-                          
-
-                          `mkdir ./dev/`
-                          `cp $i ./src/`
-                          ;;
-                        "h")
-                          `cp $i ./include/`
+                          file_type_len=$((file_type_len + 1))
+                          file_directory=${file_name:0:-$file_type_len}
+                          `mkdir ./dev/$file_directory/`
+                          `cp $i ./dev/$file_directory/`
                           ;;
                         "o")
                           `cp $i ./build/`
