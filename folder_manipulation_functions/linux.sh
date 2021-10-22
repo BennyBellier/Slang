@@ -144,6 +144,23 @@ function All_to_Divorce() {
   `mv ./dev/assets ./`
   `mv ./dev/src ./`
   `mv ./dev/include ./`
+  `rm -r ./dev`
+}
+
+function All_to_Pairwise() {
+  for i in `find ./dev/src`; do
+    if [ $i != 'dev/src/']; then
+      file_name=$(basename $i)
+      file_type=${file_name##*.}
+      file_type_len=${#file_type}
+      file_type_len=$((file_type_len + 1))
+      file_directory=${file_name:0:-$file_type_len}
+      `mkdir ./dev/src/$file_directory`
+      `cp ./dev/src/$file_directory.c ./dev/$file_directory/`
+      `cp ./dev/include/$file_directory.h ./dev/$file_directory/`
+      `rm -r ./dev/src ./dev/include`
+    fi
+  done
 }
 
 function linux_tree_restructuring() {
