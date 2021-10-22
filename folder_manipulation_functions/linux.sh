@@ -108,6 +108,9 @@ linux_refill_Pairwise() {
 
   for i in `find $tmp`; do
     if [ $i != $tmp ]; then
+      if [ $i == "main.c" ]; then
+        `cp $i ./dev/`
+      fi
       file_name=$(basename $i)
       file_type=${file_name##*.}
 
@@ -149,16 +152,62 @@ function All_to_Divorce() {
 
 function All_to_Pairwise() {
   for i in `find ./dev/src`; do
-    if [ $i != 'dev/src/']; then
+    if [ $i != './dev/src/']; then
       file_name=$(basename $i)
       file_type=${file_name##*.}
       file_type_len=${#file_type}
       file_type_len=$((file_type_len + 1))
       file_directory=${file_name:0:-$file_type_len}
       `mkdir ./dev/src/$file_directory`
-      `cp ./dev/src/$file_directory.c ./dev/$file_directory/`
+      `cp ./dev/src/$file_name ./dev/$file_directory/`
       `cp ./dev/include/$file_directory.h ./dev/$file_directory/`
-      `rm -r ./dev/src ./dev/include`
+    fi
+  done
+  `rm -r ./dev/src ./dev/include`
+}
+
+function Divorce_to_All() {
+  `mkdir ./dev`
+  `mv ./assets ./dev/`
+  `mv ./src ./dev/`
+  `mv ./include ./dev/`
+}
+
+function Divorce_to_Pairwise() {
+  `mkdir ./dev`
+  for i in `find ./src`; do
+    if [ $i != './src/']; then
+      file_name=$(basename $i)
+      file_type=${file_name##*.}
+      file_type_len=${#file_type}
+      file_type_len=$((file_type_len + 1))
+      file_directory=${file_name:0:-$file_type_len}
+      if [ $file_name == "main.c" ]; then
+        `mv ./src/main.c ./dev/`
+      fi
+      `mkdir ./dev/$file_directory`
+      `cp ./src/$file_directory.c ./dev/$file_directory/`
+      `cp ./include/$file_directory.h ./dev/$file_directory/`
+    fi
+  done
+  `cp ./assets ./dev/`
+  `rm -r ./src ./include ./assets`
+}
+
+function Pairwise_to_All() {
+  `mkdir ./dev/src ./dev/include`
+  for i in `find ./dev`; do
+    if [ $i != "./dev/"]; then
+      file_name=$(basename $i)
+      file_type=${file_name##*.}
+      case $file_type in
+                      "c" | "cpp")
+                          `cp $i ./dev/src`
+                          ;;
+                      "h")
+                          `cpp $i ./dev/include`
+                          ;;
+      esac
     fi
   done
 }

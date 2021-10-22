@@ -39,7 +39,7 @@ If you decided to use Slang in an already started project, be aware, that your `
 ```sh
 📦All-in-One # Project folder
  ┣ 📂.git
- ┣ 📂.slang     # contain slang folder file
+ ┣ 📂.slang     # contain slang configuration file
  ┣ 📂bin        # containing executive files
  ┃ ┣ 📂debug    # folder containing the debug executable version
  ┃ ┗ 📂release  # folder containing the release executable version
@@ -57,7 +57,7 @@ If you decided to use Slang in an already started project, be aware, that your `
 ```sh
 📦Divorce # Project folder
  ┣ 📂.git
- ┣ 📂.slang     # contain slang folder file
+ ┣ 📂.slang     # contain slang configuration file
  ┣ 📂assets     # folder containing the project assets
  ┣ 📂bin        # containing executive files
  ┃ ┣ 📂debug    # folder containing the debug executable version
@@ -75,7 +75,7 @@ If you decided to use Slang in an already started project, be aware, that your `
 ```sh
 📦Pairwise # Project folder
  ┣ 📂.git
- ┣ 📂.slang     # contain slang folder file
+ ┣ 📂.slang     # contain slang configuration file
  ┣ 📂bin        # containing executive files
  ┃ ┣ 📂debug    # folder containing the debug executable version
  ┃ ┗ 📂release  # folder containing the release executable version
