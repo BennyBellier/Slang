@@ -212,19 +212,22 @@ function Pairwise_to_All() {
   done
 }
 
-function Pairwise_to_divorce() {
+function Pairwise_to_Divorce() {
   `mkdir ./src ./include`
   for i in `find ./dev`; then
     if [ $i != "./dev/" ]; then
-    file_name=$(basename $i)
-    file_type=${file_name##*.}
-    case $file_type in
-                    "c" | "cpp")
-                        `cp $i ./src`
-                        ;;
-                    "h")
-                        `cp $i ./include`
-                        ;;
+      file_name=$(basename $i)
+      file_type=${file_name##*.}
+      case $file_type in
+                      "c" | "cpp")
+                          `cp $i ./src`
+                          ;;
+                      "h")
+                          `cp $i ./include`
+                          ;;
+      esac
+    fi
+  done
 }
 
 function linux_tree_restructuring() {
